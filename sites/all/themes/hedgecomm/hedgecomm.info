@@ -4,6 +4,10 @@ core = '7.x'
 engine = 'phptemplate'
 screenshot = 'screenshot.png'
 base theme = 'omega'
+
+scripts[] = scripts/jquery.carouFredSel-6.2.0-packed.js
+scripts[] = scripts/scripts.js
+
 regions[page_top] = 'Page Top'
 regions[page_bottom] = 'Page Bottom'
 regions[content] = 'Content'
@@ -349,3 +353,7 @@ settings[alpha_region_footer_second_suffix] = ''
 settings[alpha_region_footer_second_weight] = '2'
 settings[alpha_region_footer_second_css] = ''
 version = '1.x'
+
+stylesheets[all][] = fancybox/jquery.fancybox.css
+
+scripts[] = fancybox/jquery.fancybox.js

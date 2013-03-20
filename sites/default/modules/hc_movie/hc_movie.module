@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_init
+ */
+function hc_movie_init() {
+  drupal_add_js('http://www.youtube.com/player_api');
+}

@@ -1,0 +1,56 @@
+#block-hc-sm-hc-sm {
+  float: right;
+}
+
+#block-hc-sm-hc-sm ul {
+  margin: 0;
+  margin-top: 5px;
+}
+
+#block-hc-sm-hc-sm ul li {
+  float: left;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	list-style: none;
+}
+
+#block-hc-sm-hc-sm ul li .facebook {
+  background: url(img/icon_facebook.png) no-repeat left top;
+}
+
+#block-hc-sm-hc-sm ul li .facebook a {
+  display: block;
+  text-indent: -999em;
+}
+
+#block-hc-sm-hc-sm ul li .pinterest {
+  background: url(img/icon_pinterest.png) no-repeat left top;
+}
+
+#block-hc-sm-hc-sm ul li .pinterest a {
+  text-indent: -999em;
+  display: block;
+}
+
+#block-hc-sm-hc-sm ul li .twitter {
+  background: url(img/icon_twitter.png) no-repeat left top;
+  width: 24px;
+  height: 24px;
+}
+
+#block-hc-sm-hc-sm ul li .twitter a {
+  text-indent: -999em;
+  display: block;
+}
+
+#block-hc-sm-hc-sm ul li .linkedin {
+  background: url(img/icon_linkedin.png) no-repeat left top;
+  width: 24px;
+  height: 24px;
+}
+
+#block-hc-sm-hc-sm ul li .linkedin a {
+  text-indent: -999em;
+  display: block;
+}

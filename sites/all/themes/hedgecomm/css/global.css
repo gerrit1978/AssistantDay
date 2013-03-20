@@ -1,2 +1,183 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+/** HTML elements **/
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.form-required {
+  display: none;
+}
+
+/** Layout override **/
+.container-12 {
+  width: 950px !important;
+}
+
+.container-12 .grid-12 {
+  width: 930px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+/** Branding helemaal bovenaan **/
+.region-branding {
+  padding-top: 20px;
+}
+
+#branding {
+  float: left;
+  margin-top: 30px;
+  width: 362px;
+  height: 77px;
+  background: url(../img/branding.png) no-repeat left top;
+}
+
+#branding p {
+	display: none;
+}
+
+#logo {
+  float: right;
+  width: 286px;
+  height: 110px;
+  background: url(../img/logo.png) no-repeat left top;
+  text-indent: -999em;
+}
+
+#logo a {
+  display: block;
+  height: 110px;
+  text-indent: -999em;
+}
+
+/** Menu **/
+.zone-menu-wrapper {
+  background: #e90068;
+  height: 30px;
+  margin-top: 15px;
+}
+
+.zone-menu-wrapper #block-system-main-menu ul {
+  margin: 0;
+  padding: 0;  
+}
+
+.zone-menu-wrapper #block-system-main-menu ul li {
+  color: white;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.zone-menu-wrapper #block-system-main-menu ul li a {
+  border-right: 1px solid white;
+  color: white;
+	padding: 0 10px;
+}
+
+.zone-menu-wrapper #block-system-main-menu ul li.first a {
+  border-left: 1px solid white;
+}
+
+.zone-menu-wrapper #block-system-main-menu ul li a.active {
+ 	text-decoration: underline;
+}
+
+
+/** Content **/
+#section-content {
+  background: url(../img/main_left_top.png) no-repeat left top;
+}
+
+#zone-content-wrapper {
+  background: url(../img/main_right_bottom.png) no-repeat right bottom;
+  min-height: 550px;
+}
+
+#region-content {
+  margin-bottom: 20px;
+}
+
+#block-system-main {
+  margin-top: 10px;
+  background: #4a4a49;
+  border: 7px solid #353534;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  color: white;
+}
+
+
+/** Footer **/
+#zone-footer-wrapper {
+  height: 76px;
+  background: url(../img/footer.png) no-repeat center bottom;
+}
+
+#zone-footer-wrapper #block-block-2 {
+  text-indent: -999em;
+}
+
+
+/** Homepage w/ form "stel je vraag" **/
+#webform-component-markup-left {
+  margin-left: 20px;
+  width: 320px;
+  float: left;
+}
+
+#webform-component-form-right {
+  margin-left: 340px;
+  padding-right: 20px;
+}
+
+#webform-component-form-right--form-itself {
+  background: #353534;
+  padding: 15px;
+}
+
+#webform-component-form-right--form-itself #edit-submitted-form-right-form-itself-ask-your-question-here {
+  height: 40px;
+}
+
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-name {
+  position: relative;
+}
+
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-name label,
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-country label {
+  font-size: 10px;
+}
+
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-name .form-text,
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-country .form-text {
+  width: 375px;
+}
+
+#webform-client-form-6 {
+  position: relative;
+}
+
+#webform-client-form-6 #edit-submit {
+  width: 136px;
+  height: 52px;
+  color: white;
+  background: url(../img/send.png) no-repeat center center;
+  border: none;
+  text-shadow: none;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}

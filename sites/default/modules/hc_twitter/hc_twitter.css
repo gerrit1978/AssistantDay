@@ -1,0 +1,28 @@
+#block-hc-twitter-hc-twitter {
+  margin-top: 20px;
+  background: #353534 url(img/vogeltje.jpg) no-repeat 5px 8px;
+  border: 7px solid #353534;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  color: white;
+  height: 60px;
+  overflow: hidden;
+}
+
+#block-hc-twitter-hc-twitter ul {
+  margin: 0;
+  padding: 0;
+}
+
+#block-hc-twitter-hc-twitter ul li {
+  list-style: none;
+  width: 900px;
+  height: auto;
+  padding-left: 10px;
+  padding-top: 10px;  
+}
+
+#block-hc-twitter-hc-twitter ul li a {
+  color: #f3287a;
+}
