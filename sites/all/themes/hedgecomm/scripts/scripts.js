@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
 */
 
   $('a.fancybox').click(function(e) {
+    e.preventDefault();
 		$.fancybox({
 		  'helpers' : {
 		    'overlay' : {

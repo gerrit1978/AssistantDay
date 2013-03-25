@@ -155,6 +155,8 @@ a.left-linkedin {
 #webform-component-form-right--form-itself {
   background: #353534;
   padding: 15px;
+  position: relative;
+  margin-bottom: 0;
 }
 
 #webform-component-form-right--form-itself #edit-submitted-form-right-form-itself-ask-your-question-here {
