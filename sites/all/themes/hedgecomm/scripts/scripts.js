@@ -17,9 +17,10 @@ jQuery(document).ready(function($) {
     }
   });
 
+  var filmpje = "http://www.youtube.com/v/Pb1XXs7e7ac&fs=1&autoplay=1";
 
-/*
-  if ($("body").hasClass('front')) {
+
+  if ($("body").hasClass('page-node-8')) {
 
 		$.fancybox({
 		  'helpers' : {
@@ -36,7 +37,7 @@ jQuery(document).ready(function($) {
 	    'title'          : this.title,
 	    'width'          : 680,
 	    'height'         : 495,
-	    'href'           : "http://www.youtube.com/v/Pb1XXs7e7ac&fs=1&autoplay=1",
+	    'href'           : filmpje,
 	    'type'           : 'swf',
 	    'swf'            : {
 	        'wmode'              : 'transparent',
@@ -45,7 +46,6 @@ jQuery(document).ready(function($) {
     });
 
   }
-*/
 
   $('a.fancybox').click(function(e) {
     e.preventDefault();
@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
 	    'title'          : this.title,
 	    'width'          : 680,
 	    'height'         : 495,
-	    'href'           : "http://www.youtube.com/v/Pb1XXs7e7ac&fs=1&autoplay=1",
+	    'href'           : filmpje,
 	    'type'           : 'swf',
 	    'swf'            : {
 	        'wmode'              : 'transparent',
@@ -88,5 +88,10 @@ jQuery(document).ready(function($) {
     
   });
 
+
+  // background image on bottom
+  var windowHeight = $(window).height();
+  var windowHeightOk = windowHeight - 15;
+  $("body").css('min-height', windowHeight + "px");
 
 });

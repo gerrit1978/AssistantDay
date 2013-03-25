@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial;
 }
 
+h1 {
+  font-size: 28px;
+}
+
 h3 {
   font-size: 16px;
 }
@@ -36,17 +40,25 @@ a.left-linkedin {
   text-indent: -999em;
 }
 
-/** Branding helemaal bovenaan **/
-.region-branding {
-  padding-top: 20px;
+/** Layout **/
+body {
+  min-height: 100%;
+  height: 100%;
+  background: url(../img/main_right_bottom.png) no-repeat right bottom;
 }
 
+/** Branding helemaal bovenaan **/
 #branding {
   float: left;
   margin-top: 30px;
   width: 362px;
   height: 77px;
   background: url(../img/branding.png) no-repeat left top;
+}
+
+#branding a {
+  display: block;
+  height: 77px;
 }
 
 #branding p {
@@ -71,7 +83,6 @@ a.left-linkedin {
 .zone-menu-wrapper {
   background: #e90068;
   height: 30px;
-  margin-top: 15px;
 }
 
 .zone-menu-wrapper #block-system-main-menu ul {
@@ -105,13 +116,12 @@ a.left-linkedin {
 
 
 /** Content **/
-#section-content {
-  background: url(../img/main_left_top.png) no-repeat left top;
+#zone-content-wrapper {
+  min-height: 420px;
 }
 
-#zone-content-wrapper {
-  background: url(../img/main_right_bottom.png) no-repeat right bottom;
-  min-height: 550px;
+#section-content {
+  background: url(../img/main_left_top.png) no-repeat left top;
 }
 
 #region-content {
@@ -179,6 +189,41 @@ a.left-linkedin {
 
 #webform-client-form-6 {
   position: relative;
+  margin-bottom: 100px;
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this {
+  position: absolute;
+  right: 10px;
+  bottom: -60px;
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this ul {
+  margin: 0;
+  padding: 0;
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this ul li {
+  margin: 0;
+  margin-right: 10px;
+  padding: 0;
+  list-style: none;
+  float: left;
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this ul li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -999em;
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this ul li a.fb {
+  background: url(../img/icon_facebook.png);
+}
+
+#webform-client-form-6 #webform-component-form-right--share-this ul li a.tw {
+  background: url(../img/icon_twitter.png);
 }
 
 #webform-client-form-6 #edit-submit {
@@ -290,25 +335,30 @@ a.left-linkedin {
   padding-left: 10px;
   float: left;
   list-style: none;
-  padding-top: 180px;
 }
 
-#webform-client-form-7 #webform-component-gift-markup ul li.gift1 {
-  background: url(../img/gift-1.jpg) no-repeat center top;
+#webform-client-form-7 #webform-component-gift-markup ul.gifts li a.image {
+  display: block;
+  height: 170px;
+  margin-bottom: 10px;
 }
 
-#webform-client-form-7 #webform-component-gift-markup ul li.gift1:hover,
-#webform-client-form-7 #webform-component-gift-markup ul li.gift1.selected {
-  background: url(../img/gift-1-hover.jpg) no-repeat center top;
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1 a.image{
+  background: url(../img/gift-1.jpg) no-repeat left top;
 }
 
-#webform-client-form-7 #webform-component-gift-markup ul li.gift2 {
-  background: url(../img/gift-2.jpg) no-repeat center top;
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1 a.image:hover,
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1.selected a.image {
+  background: url(../img/gift-1-hover.jpg) no-repeat left top;
 }
 
-#webform-client-form-7 #webform-component-gift-markup ul li.gift2:hover,
-#webform-client-form-7 #webform-component-gift-markup ul li.gift2.selected {
-  background: url(../img/gift-2-hover.jpg) no-repeat center top;
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2 a.image {
+  background: url(../img/gift-2.jpg) no-repeat left top;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2 a.image:hover,
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2.selected a.image {
+  background: url(../img/gift-2-hover.jpg) no-repeat left top;
 }
 
 #webform-client-form-7 #edit-submit {
