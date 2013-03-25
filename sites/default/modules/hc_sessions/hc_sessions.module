@@ -4,7 +4,6 @@
  * Implements hook_init
  */
 function hc_sessions_init() {
-
   if (isset($_GET['fn'])) {
     $_SESSION['firstname'] = $_GET['fn'];
   }
