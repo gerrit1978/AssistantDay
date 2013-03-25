@@ -4,6 +4,7 @@
 /** HTML elements **/
 a:link, a:visited {
   text-decoration: none;
+  color: #f3287a;
 }
 
 .form-required {
@@ -25,6 +26,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h3 {
   font-size: 16px;
+}
+
+a.left-linkedin {
+  display: inline-block;
+  height: 23px;
+  width: 23px;
+  background: url(../img/linkedin.jpg) no-repeat center center;
+  text-indent: -999em;
 }
 
 /** Branding helemaal bovenaan **/
@@ -180,4 +189,139 @@ h3 {
   position: absolute;
   right: 30px;
   bottom: 20px;
+}
+
+#webform-client-form-6 a.btn_extra {
+  display: block;
+  color: white;background: url(../img/btn_get_gift.jpg) no-repeat center center;
+  text-align: center;
+  width: 95px;
+  height: 32px;
+  line-height: 32px;
+}
+
+#webform-client-form-6 #webform-component-form-right--extra-gift p {
+  margin-bottom: 10px;
+}
+
+/** Claim je cadeau formulier **/
+#webform-client-form-7 {
+  margin: 20px;
+  position: relative;
+}
+
+#webform-client-form-7 h1 {
+  font-family: Arial;
+  font-weight: lighter;
+}
+
+#webform-client-form-7 .form-item {
+  margin: 0.5em;
+}
+
+#webform-client-form-7 label {
+  font-size: 10px;
+}
+
+#webform-client-form-7 #webform-component-formulier {
+  background: #353533;
+  padding: 10px;
+  padding-bottom: 60px;
+}
+
+#webform-client-form-7 #webform-component-formulier--name-left {
+  width: 340px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right {
+  margin-left: 320px;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--street,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--street .form-text  {
+  width: 250px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--number,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--number .form-text  {
+  width: 150px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--zip-postal-code,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--zip-postal-code .form-text  {
+  clear: both;
+  width: 150px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--city-town,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--city-town .form-text  {
+  width: 250px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--country,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--country .form-text  {
+  clear: both;
+  width: 413px;
+  float: left;
+}
+
+#webform-client-form-7 #webform-component-gift {
+  display: none;
+}
+
+#webform-client-form-7 #webform-component-gift-markup {
+  cursor: pointer;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul.gifts {
+  margin: 0;
+  padding: 0;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul.gifts li {
+  width: 410px;
+  padding-left: 10px;
+  float: left;
+  list-style: none;
+  padding-top: 180px;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1 {
+  background: url(../img/gift-1.jpg) no-repeat center top;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1:hover,
+#webform-client-form-7 #webform-component-gift-markup ul li.gift1.selected {
+  background: url(../img/gift-1-hover.jpg) no-repeat center top;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2 {
+  background: url(../img/gift-2.jpg) no-repeat center top;
+}
+
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2:hover,
+#webform-client-form-7 #webform-component-gift-markup ul li.gift2.selected {
+  background: url(../img/gift-2-hover.jpg) no-repeat center top;
+}
+
+#webform-client-form-7 #edit-submit {
+  width: 136px;
+  height: 52px;
+  color: white;
+  background: url(../img/send.png) no-repeat center center;
+  border: none;
+  text-shadow: none;
+  position: absolute;
+  bottom: 10px;
+  right: 85px;
+}
+
+/** Confirmation for question page **/
+.page-node-8 #block-system-main .block-inner {
+  margin: 30px;
 }

@@ -1,0 +1,152 @@
+<?php
+
+/**
+ * Implements hook_init
+ */
+function hc_sessions_init() {
+
+  if (isset($_GET['fn'])) {
+    $_SESSION['firstname'] = $_GET['fn'];
+  }
+  
+  if (isset($_GET['ln'])) {
+    $_SESSION['lastname'] = $_GET['ln'];
+  }
+  
+  if (isset($_GET['code'])) {
+    $_SESSION['code'] = $_GET['code'];
+  }
+}
+
+
+/**
+ * Implements hook_menu
+ */
+function hc_sessions_menu() {
+  $items = array();
+  
+  $items['reset-session'] = array(
+    'page callback' => '_hc_sessions_reset_session',
+    'access arguments' => array('access content'),
+  );
+  
+  return $items;
+}
+
+
+
+/**
+ * Implements hook_form_alter
+ */
+function hc_sessions_form_alter(&$form, &$form_state, $form_id) {
+
+  // homepage form
+  if ($form_id == 'webform_client_form_6') {
+
+    // remove "get extra gift button" if no code in session
+    if (!isset($_SESSION['code'])) {
+      unset($form['submitted']['form_right']['extra_gift']);
+    }
+
+  }
+
+  if ($form_id == 'webform_client_form_7') {
+  
+    // add validation function for code
+    $form['#validate'][] = "_hc_sessions_form_validate";
+  
+    // change firstname and lastname
+    $markup = $form['submitted']['formulier']['name_left']['#markup'];
+
+    if (isset($_SESSION['firstname'])) {
+	    $markup = str_replace('[firstname]', $_SESSION['firstname'], $markup);
+	  } else {
+	    $markup = str_replace('[firstname]', '', $markup);	  
+	  }
+	  if (isset($_SESSION['lastname'])) {
+      $markup = str_replace('[lastname]', $_SESSION['lastname'], $markup);
+    } else {
+      $markup = str_replace('[lastname]', '', $markup);    
+    }
+  
+    $form['submitted']['formulier']['name_left']['#markup'] = $markup;
+    
+    // code
+    if (isset($_SESSION['code'])) {
+      $form['submitted']['code']['#value'] = $_SESSION['code'];
+    }
+    
+    // firstname
+    if (isset($_SESSION['firstname'])) {
+      $form['submitted']['firstname']['#value'] = $_SESSION['firstname'];
+    }
+
+    // lastname
+    if (isset($_SESSION['lastname'])) {
+      $form['submitted']['lastname']['#value'] = $_SESSION['lastname'];
+    }
+    
+  }
+}
+
+
+/**
+ * Implements hook_node_access
+ */
+function hc_sessions_node_access($node, $op, $account) {
+  if (isset($node->vid) && $node->vid == 7) {
+    if (!isset($_SESSION['code'])) {
+      return NODE_ACCESS_DENY;
+    }
+  }
+}
+
+
+/**
+ * Validation function for double checking code
+ */
+function _hc_sessions_form_validate(&$form, &$form_state) {
+  $values = $form_state['values'];
+
+  // check if code is already submitted
+  $code = $values['submitted']['code'];
+  
+  $mapping = _hc_sessions_mapping($form['#node']->webform['components']);
+
+  $code_cid = $mapping['code'];
+  
+  $result = db_query("SELECT COUNT(*) as count FROM {webform_submitted_data} WHERE cid=:cid AND data=:data;", array(':cid' => $code_cid, ':data' => $code));
+  foreach ($result as $row) {
+    $count = $row->count;
+  }
+
+  if ($count > 0) {
+    form_set_error('code', t('You already claimed your gift.'));
+    return FALSE;
+  } else {
+    return TRUE;
+  }
+}
+
+
+/**
+ * Mapping 
+ */
+function _hc_sessions_mapping($components) {
+
+  $mapping = array();
+  
+  foreach ($components as $cid => $value) {
+    $mapping[$value['form_key']] = $cid;
+  }
+  
+  return $mapping;
+}
+
+/**
+ * Callback function for resetting the session
+ */
+function _hc_sessions_reset_session() {
+  session_destroy();
+  drupal_goto('<front>');
+}
