@@ -7,6 +7,10 @@ a:link, a:visited {
   color: #f3287a;
 }
 
+a:hover {
+  color: white;
+}
+
 .form-required {
   display: none;
 }
@@ -178,6 +182,7 @@ body {
 }
 
 #webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-name label,
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-company label,
 #webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-country label {
   font-size: 10px;
 }
@@ -251,6 +256,26 @@ body {
   margin-bottom: 10px;
 }
 
+#webform-client-form-6 .infowindow1, #webform-client-form-6 .infowindow2 {
+  background: #666;
+  padding: 20px;
+  border: 4px solid #333;
+  border-radius: 10px;
+  position: absolute;
+}
+
+#webform-client-form-6 .infowindow1 {
+  left: 100px;
+  top: 200px;
+  z-index: 10000;
+}
+
+#webform-client-form-6 .infowindow2 {
+  left: 100px;
+  top: 250px;
+  z-index: 10000;
+}
+
 /** Claim je cadeau formulier **/
 #webform-client-form-7 {
   margin: 20px;
@@ -315,6 +340,15 @@ body {
   clear: both;
   width: 413px;
   float: left;
+}
+
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--company,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--company .form-text,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--email,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--email .form-text,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--handover,
+#webform-client-form-7 #webform-component-formulier--form-right #webform-component-formulier--form-right--handover .form-text  {
+  width: 413px;
 }
 
 #webform-client-form-7 #webform-component-gift {

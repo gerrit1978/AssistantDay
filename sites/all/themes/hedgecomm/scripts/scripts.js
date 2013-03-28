@@ -94,4 +94,16 @@ jQuery(document).ready(function($) {
   var windowHeightOk = windowHeight - 15;
   $("body").css('min-height', windowHeight + "px");
 
+  // infowindows
+  $('a.info1').hover(function() {
+    $('.infowindow1').fadeIn();
+  }, function() {
+    $('.infowindow1').fadeOut();
+  });
+  $('a.info2').hover(function() {
+    $('.infowindow2').fadeIn();
+  }, function() {
+    $('.infowindow2').fadeOut();
+  });
+
 });
