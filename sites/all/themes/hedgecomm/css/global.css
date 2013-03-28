@@ -8,7 +8,7 @@ a:link, a:visited {
 }
 
 a:hover {
-  color: white;
+  color: black;
 }
 
 .form-required {
@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 28px;
+  font-weight: lighter;
 }
 
 h3 {
@@ -48,14 +49,14 @@ a.left-linkedin {
 body {
   min-height: 100%;
   height: 100%;
-  background: url(../img/main_right_bottom.png) no-repeat right bottom;
+  background: #e4e3e3 url(../img/main_right_bottom.png) no-repeat right bottom;
 }
 
 /** Branding helemaal bovenaan **/
 #branding {
   float: left;
   margin-top: 30px;
-  width: 362px;
+  width: 371px;
   height: 77px;
   background: url(../img/branding.png) no-repeat left top;
 }
@@ -130,16 +131,15 @@ body {
 
 #region-content {
   margin-bottom: 20px;
+  background: white;
+}
+
+.page-node-7 #region-content {
+  background: none;
 }
 
 #block-system-main {
   margin-top: 10px;
-  background: #4a4a49;
-  border: 7px solid #353534;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  color: white;
 }
 
 
@@ -156,7 +156,7 @@ body {
 
 /** Homepage w/ form "stel je vraag" **/
 #webform-component-markup-left {
-  margin-left: 20px;
+  margin-left: 0;
   width: 320px;
   float: left;
 }
@@ -279,7 +279,7 @@ body {
 
 /** Claim je cadeau formulier **/
 #webform-client-form-7 {
-  margin: 20px;
+  margin-top: 40px;
   position: relative;
 }
 
@@ -356,8 +356,17 @@ body {
   display: none;
 }
 
+#webform-client-form-7 #webform-component-title {
+  margin-left: 40px;
+}
+
+#webform-component-formulier {
+  margin: 0 40px;
+}
+
 #webform-client-form-7 #webform-component-gift-markup {
   cursor: pointer;
+  margin-left: 40px;
 }
 
 #webform-client-form-7 #webform-component-gift-markup ul.gifts {
@@ -411,4 +420,13 @@ body {
 /** Confirmation for question page **/
 .page-node-8 #block-system-main .block-inner {
   margin: 30px;
+}
+
+fieldset.webform-component-fieldset label {
+  color: white;
+}
+
+#webform-component-formulier--name-left,
+#webform-component-formulier--form-right--handover {
+ color: white;
 }
