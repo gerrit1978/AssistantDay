@@ -188,6 +188,7 @@ body {
 }
 
 #webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-name .form-text,
+#webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-company .form-text,
 #webform-component-form-right--form-itself #webform-component-form-right--form-itself--your-country .form-text {
   width: 375px;
 }
